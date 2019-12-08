@@ -6,18 +6,18 @@
     <description>Recent content on 小咸鱼的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
-    <lastBuildDate>Thu, 05 Dec 2019 14:41:43 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 08 Dec 2019 19:40:29 +0800</lastBuildDate>
     
 	<atom:link href="https://ffreshman.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>blog-2</title>
-      <link>https://ffreshman.github.io/posts/second-blog/</link>
-      <pubDate>Thu, 05 Dec 2019 14:41:43 +0800</pubDate>
+      <title>HTML</title>
+      <link>https://ffreshman.github.io/posts/html/</link>
+      <pubDate>Sun, 08 Dec 2019 19:40:29 +0800</pubDate>
       
-      <guid>https://ffreshman.github.io/posts/second-blog/</guid>
-      <description>这是我第二篇博客 做个试验看看 </description>
+      <guid>https://ffreshman.github.io/posts/html/</guid>
+      <description>&lt;p&gt;HTML标签学习&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -26,10 +26,7 @@
       <pubDate>Thu, 05 Dec 2019 14:41:43 +0800</pubDate>
       
       <guid>https://ffreshman.github.io/posts/first-blog/</guid>
-      <description>如何用hugo搭建自己的个人博客 1.下载Hugo 下载windows64位版本的压缩包，解压到一个文件夹（最好全英文），接着把安装路劲添加到path环境变量中，试着在控制台输入查看版本  hugo version 2.查看Hugo官网搭建博客  在你要创建的目录下输入  hugo new site quickstart(取一个你喜欢的名字比如ffreshman.github.io-creator) cd进入你创建好的目录中运行以下代码  git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke 这里的ananke是你的主题，后期可以选择跟换合适的主题
-接下来创建一个markdown文件，来写你文章的主体部分  hugo new posts/你需要的博客标题.md 关于怎么写markdown
-通过hugo-sever预览你的博客  hugo server -D 这里你的draft状态保持为true
-接着创建一个准备上传到github的页面public  hugo -D 然后把这个public上传到github仓库就可以查看你的博客了</description>
+      <description>&lt;h1 id=&#34;hugo&#34;&gt;如何用hugo搭建自己的个人博客&lt;/h1&gt;</description>
     </item>
     
   </channel>

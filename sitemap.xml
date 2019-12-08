@@ -3,31 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://ffreshman.github.io/posts/second-blog/</loc>
-    <lastmod>2019-12-05T14:41:43+08:00</lastmod>
+    <loc>https://ffreshman.github.io/categories/</loc>
+    <lastmod>2019-12-08T19:40:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ffreshman.github.io/categories/html/</loc>
+    <lastmod>2019-12-08T19:40:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ffreshman.github.io/posts/html/</loc>
+    <lastmod>2019-12-08T19:40:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ffreshman.github.io/tags/html/</loc>
+    <lastmod>2019-12-08T19:40:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ffreshman.github.io/posts/</loc>
+    <lastmod>2019-12-08T19:40:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ffreshman.github.io/tags/</loc>
+    <lastmod>2019-12-08T19:40:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ffreshman.github.io/tags/%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2019-12-08T19:40:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ffreshman.github.io/</loc>
+    <lastmod>2019-12-08T19:40:29+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://ffreshman.github.io/posts/first-blog/</loc>
     <lastmod>2019-12-05T14:41:43+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ffreshman.github.io/posts/</loc>
-    <lastmod>2019-12-05T14:41:43+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ffreshman.github.io/</loc>
-    <lastmod>2019-12-05T14:41:43+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ffreshman.github.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://ffreshman.github.io/tags/</loc>
   </url>
   
 </urlset>

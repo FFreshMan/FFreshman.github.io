@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+HTML
+</title>
+
+    
+
+
+  
+  <meta name="author" content="FFreshman" />
+  <meta name="description" content="HTML标签学习
+" />
+
+
+
+<meta name="generator" content="Hugo 0.60.1" />
+
+<link rel="canonical" href="https://ffreshman.github.io/posts/html/" />
+
+
+<meta property="og:title" content="HTML" />
+<meta property="og:description" content="HTML标签学习" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ffreshman.github.io/posts/html/" />
+<meta property="article:published_time" content="2019-12-08T19:40:29+08:00" />
+<meta property="article:modified_time" content="2019-12-08T19:40:29+08:00" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HTML"/>
+<meta name="twitter:description" content="HTML标签学习"/>
+
+
+<link rel="stylesheet" href="/css/github-markdown.css" />
+<link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/site.css" />
+
+
+
+
+
+  </head>
+
+  
+  <body>
+  
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'https:\/\/ffreshman.github.io\/'"></i>
+  </div>
+  <div class="item">
+    <i id="theme-switch" class="large link icon" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment">
+      <div class="ui right ribbon black inverted label" onclick="savePostAsImg()">
+        <i class="save link icon"></i>
+      </div>
+      <header>
+        <h2 class="ui header">
+          HTML
+          <div class="sub header">@ FFreshman · Sunday, Dec 8, 2019 · 2 minute read · Update at Dec 8, 2019</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><p>HTML标签学习</p>
+<h1 id="html">HTML入门笔记</h1>
+<h2 id="html1">一、HTML是什么</h2>
+<p>HTML 是网页使用的语言，定义了网页的结构和内容。浏览器访问网站，其实就是从服务器下载 HTML 代码，然后渲染出网页。</p>
+<p>HTML 的全名是“超文本标记语言”（HyperText Markup Language），上个世纪90年代由欧洲核子研究中心的物理学家蒂姆·伯纳斯-李（Tim Berners-Lee）发明。它的最大特点就是支持超链接，可以跳转到其他网页，从而构成了整个互联网。1999年，HTML 4.01 版发布，成为广泛接受的 HTML 标准。2014年，HTML 5 发布，这是目前正在使用的版本。</p>
+<h2 id="html2">二、html的基本结构</h2>
+<p><img src="/images/htmljiegou.png" alt=""></p>
+<p>html的基本结构如上，更多详细的学习推荐<a href="https://wangdoc.com/html/intro.html#%E6%A6%82%E8%BF%B0">网道HTML教程</a>
+再推荐一款在线IDE<a href="https://codesandbox.io/">CodeSandbox</a></p>
+<h2 id="heading">三、常用章节标签</h2>
+<h3 id="1-header">(1) <code>&lt;header&gt;</code></h3>
+<p><code>&lt;header&gt;</code>标签可以用在多个场景，既可以表示整个网页的头部，也可以表示一篇文章或者一个区块的头部。</p>
+<p>如果用在网页的头部，就称为“页眉”。网站导航和搜索栏通常会放在<code>&lt;header&gt;</code>里面。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  &lt;<span style="color:#f92672">h1</span>&gt;公司名称&lt;/<span style="color:#f92672">h1</span>&gt;
+  &lt;<span style="color:#f92672">ul</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/home&#34;</span>&gt;首页&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/about&#34;</span>&gt;关于&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/contact&#34;</span>&gt;联系&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+  &lt;/<span style="color:#f92672">ul</span>&gt;
+  &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/search&#34;</span>&gt;
+    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;q&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;search&#34;</span> /&gt;
+    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> /&gt;
+  &lt;/<span style="color:#f92672">form</span>&gt;&lt;/<span style="color:#f92672">header</span>&gt;
+</code></pre></div><p>如果<code>&lt;header&gt;</code>用在文章的头部，则可以把文章标题、作者等信息放进去。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">article</span>&gt;
+&lt;<span style="color:#f92672">header</span>&gt;
+  &lt;<span style="color:#f92672">h2</span>&gt;文章标题&lt;/<span style="color:#f92672">h2</span>&gt;
+  &lt;<span style="color:#f92672">p</span>&gt;张三，发表于2010年1月1日&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">header</span>&gt;&lt;/<span style="color:#f92672">article</span>&gt;
+</code></pre></div><p>由于<code>&lt;header&gt;</code>可以用在多种场景，所以一个页面可能包含多个<code>&lt;header&gt;</code>，但是一个具体的场景里面只能包含一个，比如网页的页眉只能有一个。另外，<code>&lt;header&gt;</code>里面不能包含另一个<code>&lt;header&gt;</code>或<code>&lt;footer&gt;</code>。</p>
+<h3 id="2footer">(2)<code>&lt;footer&gt;</code></h3>
+<p><code>&lt;footer&gt;</code>标签表示网页、文章或章节的尾部。如果用于整张网页的尾部，就称为“页尾”，通常包含版权信息或者其他相关信息。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">body</span>&gt;
+  &lt;<span style="color:#f92672">footer</span>&gt;
+    &lt;<span style="color:#f92672">p</span>&gt;© 2018 xxx 公司&lt;/<span style="color:#f92672">p</span>&gt;
+  &lt;/<span style="color:#f92672">footer</span>&gt;&lt;/<span style="color:#f92672">body</span>&gt;
+</code></pre></div><h3 id="3main">(3)<code>&lt;main&gt;</code></h3>
+<p><code>&lt;main&gt;</code>标签表示页面的主体内容，一个页面只能有一个<code>&lt;main&gt;</code>。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">body</span>&gt;
+        &lt;<span style="color:#f92672">header</span>&gt;页眉&lt;/<span style="color:#f92672">header</span>&gt;
+        &lt;<span style="color:#f92672">main</span>&gt;
+            &lt;<span style="color:#f92672">article</span>&gt;文章&lt;/<span style="color:#f92672">article</span>&gt;
+        &lt;/<span style="color:#f92672">main</span>&gt;
+        &lt;<span style="color:#f92672">aside</span>&gt;侧边栏&lt;/<span style="color:#f92672">aside</span>&gt;
+        &lt;<span style="color:#f92672">footer</span>&gt;页尾&lt;/<span style="color:#f92672">footer</span>&gt;
+    &lt;/<span style="color:#f92672">body</span>&gt;
+</code></pre></div><p>注1：<code>&lt;main&gt;</code>是顶层标签，不能放置在<code>&lt;header&gt;</code>、<code>&lt;footer&gt;</code>、<code>&lt;article&gt;</code>、<code>&lt;aside&gt;</code>、<code>&lt;nav&gt;</code>等标签之中。</p>
+<p>注2：另外，功能性区块（比如搜索栏）不适合放入<code>&lt;main&gt;</code>，除非当前页面就是搜索页面。</p>
+<h3 id="4aside">(4)<code>&lt;aside&gt;</code></h3>
+<p><code>&lt;aside&gt;</code>标签用来放置与网页或文章主要内容间接相关的部分。网页级别的<code>&lt;aside&gt;</code>，可以用来放置侧边栏，但不一定就在页面的侧边；文章级别的<code>&lt;aside&gt;</code>，可以用来放置评论或注释。</p>
+<p>下面是网页级别的<code>&lt;aside&gt;</code>的例子。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">body</span>&gt;
+  &lt;<span style="color:#f92672">main</span>&gt;主体内容&lt;/<span style="color:#f92672">main</span>&gt;
+  &lt;<span style="color:#f92672">aside</span>&gt;侧边栏&lt;/<span style="color:#f92672">aside</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+</code></pre></div><h3 id="5section">(5)<code>&lt;section&gt;</code></h3>
+<p><code>&lt;section&gt;</code>标签表示一个含有主题的独立部分，通常用在文档里面表示一个章节，比如<code>&lt;article&gt;</code>可以包含多个<code>&lt;section&gt;</code>。<code>&lt;section&gt;</code>总是多个一起使用，一个页面不能只有一个<code>&lt;section&gt;</code>。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#f92672">article</span>&gt;
+        &lt;<span style="color:#f92672">h1</span>&gt;文章标题&lt;/<span style="color:#f92672">h1</span>&gt;
+        &lt;<span style="color:#f92672">section</span>&gt;
+            &lt;<span style="color:#f92672">h2</span>&gt;第一章&lt;/<span style="color:#f92672">h2</span>&gt;
+            &lt;<span style="color:#f92672">p</span>&gt;...&lt;/<span style="color:#f92672">p</span>&gt;
+        &lt;/<span style="color:#f92672">section</span>&gt;
+        &lt;<span style="color:#f92672">section</span>&gt;
+            &lt;<span style="color:#f92672">h2</span>&gt;第二章&lt;/<span style="color:#f92672">h2</span>&gt;
+            &lt;<span style="color:#f92672">p</span>&gt;...&lt;/<span style="color:#f92672">p</span>&gt;
+        &lt;/<span style="color:#f92672">section</span>&gt;
+    &lt;/<span style="color:#f92672">article</span>&gt;
+</code></pre></div><h3 id="6h1--h6">(6)<code>&lt;h1&gt;</code> ~ <code>&lt;h6&gt;</code></h3>
+<p>HTML 提供了6个标签，用来表示文章的标题。按照标题的等级，一共分成六级。<code>&lt;h1&gt;</code>是最高级别的标题，<code>&lt;h6&gt;</code>是最低级别的标题。下一级标题都是上一级标题的子标题，比如，一个<code>&lt;h1&gt;</code>后面可以有多个<code>&lt;h2&gt;</code>，每个<code>&lt;h2&gt;</code>后面又可以有多个<code>&lt;h3&gt;</code>。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#f92672">body</span>&gt;
+        &lt;<span style="color:#f92672">h1</span>&gt;JavaScript 语言介绍&lt;/<span style="color:#f92672">h1</span>&gt;
+        &lt;<span style="color:#f92672">h2</span>&gt;概述&lt;/<span style="color:#f92672">h2</span>&gt;
+        &lt;<span style="color:#f92672">h2</span>&gt;基本概念&lt;/<span style="color:#f92672">h2</span>&gt;
+        &lt;<span style="color:#f92672">h3</span>&gt;网页&lt;/<span style="color:#f92672">h3</span>&gt;
+        &lt;<span style="color:#f92672">h3</span>&gt;链接&lt;/<span style="color:#f92672">h3</span>&gt;
+        &lt;<span style="color:#f92672">h2</span>&gt;主要用法&lt;/<span style="color:#f92672">h2</span>&gt;
+    &lt;/<span style="color:#f92672">body</span>&gt;
+</code></pre></div><h3 id="7article">(7)<code>&lt;article&gt;</code></h3>
+<p><code>&lt;article&gt;</code>标签表示页面里面一段完整的内容，即使页面的其他部分不存在，也具有独立使用的意义，通常用来表示一篇文章或者一个论坛帖子。它可以有自己的标题（<code>&lt;h1&gt;</code>到<code>&lt;h6&gt;</code>）。</p>
+<h2 id="heading1">四、全局属性</h2>
+<h3 id="1-id">(1) id</h3>
+<p>id属性是元素在网页内的唯一标识符。比如，网页可能包含多个<code>&lt;p&gt;</code>标签，id属性可以指定每个<code>&lt;p&gt;</code>标签的唯一标识符,注：如果有相同id出现，浏览器并不会报错，但是在js中调用的时候会出错</p>
+<p>id属性的值必须是全局唯一的，同一个页面不能有两个相同的id属性。另外，id属性的值不得包含空格。</p>
+<p>Tips：id属性的值还可以在最前面加上#，放到 URL 中作为锚点，定位到该元素在网页内部的位置。比如，用户访问网址:https://foo.com/index.html#bar 的时候，浏览器会自动将页面滚动到bar的位置，让用户第一眼就看到这部分内容。</p>
+<h3 id="2-class">(2) Class</h3>
+<p>class属性用来对网页元素进行分类。如果不同元素的class属性值相同，就表示它们是一类的。</p>
+<p>元素可以同时具有多个 class，它们之间使用空格分隔。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;p1 p2 p3&#34;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><h3 id="3-title">(3) Title</h3>
+<p>title属性用来为元素添加附加说明。大多数浏览器中，鼠标悬浮在元素上面时，会将title属性值作为浮动提示，显示出来。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;版权说明&#34;</span>&gt;
+  &lt;<span style="color:#f92672">p</span>&gt;本站内容使用创意共享许可证，可以自由使用。&lt;/<span style="color:#f92672">p</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><h3 id="4-tabindex">(4) Tabindex</h3>
+<p>tabindex属性的值是一个整数，表示用户按下 Tab 键的时候，网页焦点转移的顺序。不同的属性值有不同的含义。
+根据tabindex的值从小到大依次访问</p>
+<pre><code>tabindex=0 最后访问
+
+tanindex=-1 不访问
+</code></pre>
+<h3 id="5-style">(5) Style</h3>
+<p>style属性用来指定当前元素的 CSS 样式。具体的设置，请看 CSS 教程。具体内容看css中</p>
+<h3 id="6-id">(6) id</h3>
+<p>hidden是一个布尔属性，表示当前的网页元素不再跟页面相关，因此浏览器不会渲染这个元素，所以就不会在网页中看到它。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">hidden</span>&gt;本句不会显示在页面上。&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p><!-- raw HTML omitted --> 注:意如果在css中设置了display：block则优先级高于hidden，内容依然会显示<!-- raw HTML omitted --></p>
+<h3 id="7lang">(7)Lang</h3>
+<p>lang属性指定网页元素使用的语言。</p>
+<ul>
+<li>zh：中文</li>
+<li>zh-Hans：简体中文</li>
+<li>zh-Hant：繁体中文</li>
+<li>en：英语</li>
+<li>en-US：美国英语</li>
+<li>en-GB：英国英语</li>
+<li>es：西班牙语</li>
+<li>fr：法语</li>
+</ul>
+<h3 id="8contenteditable">(8)contenteditable</h3>
+<p>HTML 网页的内容默认是用户不能编辑，contenteditable属性允许用户修改内容。它有两个可能的值。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">contenteditable</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>&gt;
+鼠标点击，本句内容可修改。&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><h2 id="heading2">五、常见的内容标签</h2>
+<h3 id="1div">(1)<code>&lt;div&gt;</code></h3>
+<p><code>&lt;div&gt;</code>是一个通用标签，表示一个区块（division）。它没有语义，如果网页需要一个块级元素容器，又没有其他合适的标签，就可以使用这个标签。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;main&#34;</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article&#34;</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;
+      &lt;<span style="color:#f92672">h1</span>&gt;文章标题&lt;/<span style="color:#f92672">h1</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>上面代码读起来很费力，因为不带有语义。后来，HTML 5 就提出了语义标签，改进了上面的代码。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">main</span>&gt;
+  &lt;<span style="color:#f92672">article</span>&gt;
+    &lt;<span style="color:#f92672">header</span>&gt;
+      &lt;<span style="color:#f92672">h1</span>&gt;文章标题&lt;/<span style="color:#f92672">h1</span>&gt;
+    &lt;/<span style="color:#f92672">header</span>&gt;
+  &lt;/<span style="color:#f92672">article</span>&gt;
+&lt;/<span style="color:#f92672">main</span>&gt;
+</code></pre></div><h3 id="2p">(2)<code>&lt;p&gt;</code></h3>
+<p><code>&lt;p&gt;</code>标签是一个块级元素，代表文章的一个段落（paragraph）。不仅是文本，任何想以段落显示的内容，比如图片和表单项，都可以放进<code>&lt;p&gt;</code>元素。</p>
+<h3 id="3span">(3)<code>&lt;span&gt;</code></h3>
+<p><code>&lt;span&gt;</code>是一个通用目的的行内标签（即不会产生换行），不带有任何语义。它通常用作 CSS 样式的钩子，如果需要对某些行内内容指定样式，就可以把它们放置在<code>&lt;span&gt;</code>。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;这是一句&lt;<span style="color:#f92672">span</span>&gt;重要&lt;/<span style="color:#f92672">span</span>&gt;的句子。&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><h3 id="4br">(4)<code>&lt;br&gt;</code></h3>
+<p><code>&lt;br&gt;</code>让网页产生一个换行效果。该标签是单独使用的，<!-- raw HTML omitted --><!-- raw HTML omitted -->没有闭合标签。<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h3 id="5hr">(5)<code>&lt;hr&gt;</code></h3>
+<p><code>&lt;hr&gt;</code>用来在一篇文章中分隔两个不同的主题，浏览器会将其渲染为一根水平线。该标签是单独使用的，<!-- raw HTML omitted -->没有闭合标签。<!-- raw HTML omitted --></p>
+<h3 id="6precode">(6)<code>&lt;pre&gt;</code>和<code>&lt;code&gt;</code></h3>
+<p><code>&lt;pre&gt;</code>是一个块级元素，表示保留原来的格式（preformatted），即浏览器会保留该标签内部原始的换行和空格。浏览器默认以等宽字体显示标签内容。常和<code>&lt;code&gt;</code>一起使用</p>
+<p><code>&lt;code&gt;</code>标签是一个行内元素，表示标签内容是计算机代码，浏览器默认会以等宽字体显示。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">pre</span>&gt;
+    &lt;<span style="color:#f92672">code</span>&gt;
+    For (i=1){
+    i+=1;
+    }
+    &lt;/<span style="color:#f92672">code</span>&gt;
+&lt;/<span style="color:#f92672">pre</span>&gt;
+</code></pre></div><p><!-- raw HTML omitted -->注:HTML 标签在<code>&lt;pre&gt;</code>里面还是起作用的。<code>&lt;pre&gt;</code>只保留空格和换行，不会保留 HTML 标签。<!-- raw HTML omitted --></p>
+<h3 id="7strongem">(7)<code>&lt;strong&gt;</code>和<code>&lt;em&gt;</code></h3>
+<p><code>&lt;em&gt;</code>是一个行内标签，表示强调（emphasize），浏览器会以斜体显示它包含的内容。
+注：<code>&lt;em&gt;</code>是语义上的强调，<code>&lt;strong&gt;</code>是内容上的强调。</p>
+<h1 id="html3">更多内容请参考上文的网道HTML教程!</h1></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+        
+          <a class="ui label" href="/tags/html" title="html">html</a>
+        
+          <a class="ui label" href="/tags/%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B" title="入门教程">入门教程</a>
+        
+      
+    </footer>
+
+    
+
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+    </div>
+
+    <h3 class="ui header">&#39;s blog<div class="sub header" style="margin-top: 0.5rem;"></div>
+    </h3>
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="/posts">
+        <i class="archive icon" title="Archives"></i>
+      </a>
+      
+      <a class="item" href="/tags">
+        <i class="tags icon" title="All Tags"></i>
+      </a>
+      <a class="item" href="/categories">
+        <i class="th list icon" title="All Categories"></i>
+      </a>
+    </div>
+  </section>
+
+  
+  <section class="ui attached center aligned segment dream-tags">
+    
+      <a class="ui label" href="/tags/html" title="html">html</a>
+    
+      <a class="ui label" href="/tags/%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B" title="入门教程">入门教程</a>
+    
+  </section>
+  
+
+  
+  <section class="ui attached segment dream-categories">
+    <div class="ui accordion">
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/html" class="item">html</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://ffreshman.github.io/posts/html/" class="item">HTML</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+    </div>
+  </section>
+  
+
+  <section class="ui bottom attached center aligned segment">
+      
+      <p>© 2019 小咸鱼的博客</p>
+      
+      <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+  </section>
+</article>
+
+  </div>
+</div>
+
+        </section>
+        <section class="back">
+          
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'https:\/\/ffreshman.github.io\/'"></i>
+  </div>
+  <div class="item">
+    <i id="theme-switch" class="large link icon" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          <div class="ui centered relaxed grid dream-grid dream-back">
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">Social Links</h3>
+      </div>
+      <div class="ui attached segment">
+        <nav class="ui secondary menu dream-menu">
+          
+
+          
+
+          
+
+          
+
+          
+        </nav>
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+  
+</div>
+
+        </section>
+      </div>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+<script src="/js/semantic.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/theme.js"></script>
+<script src="/js/html2canvas.min.js"></script>
+
+
+
+  </body>
+</html>
