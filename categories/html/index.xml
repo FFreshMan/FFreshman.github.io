@@ -6,10 +6,19 @@
     <description>Recent content in HTML on 小咸鱼的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
-    <lastBuildDate>Sun, 08 Dec 2019 19:40:29 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 09 Dec 2019 21:40:04 +0800</lastBuildDate>
     
 	<atom:link href="https://ffreshman.github.io/categories/html/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HTML</title>
+      <link>https://ffreshman.github.io/posts/html.label/</link>
+      <pubDate>Mon, 09 Dec 2019 21:40:04 +0800</pubDate>
+      
+      <guid>https://ffreshman.github.io/posts/html.label/</guid>
+      <description>&lt;p&gt;一些常用HTML标签的使用&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>HTML</title>
