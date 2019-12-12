@@ -5,35 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-how to blog
+Css Box
 </title>
 
     
 
 
   
-  <meta name="author" content="" />
-  <meta name="description" content="如何用hugo搭建自己的个人博客" />
+  <meta name="author" content="FFreshman" />
+  <meta name="description" content="CSS 盒模型
+" />
 
 
 
 <meta name="generator" content="Hugo 0.60.1" />
 
-<link rel="canonical" href="https://ffreshman.github.io/posts/first-blog/" />
+<link rel="canonical" href="https://ffreshman.github.io/posts/css-box/" />
 
 
-<meta property="og:title" content="how to blog" />
-<meta property="og:description" content="如何用hugo搭建自己的个人博客" />
+<meta property="og:title" content="Css Box" />
+<meta property="og:description" content="CSS 盒模型" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ffreshman.github.io/posts/first-blog/" />
-<meta property="article:published_time" content="2019-12-05T14:41:43+08:00" />
-<meta property="article:modified_time" content="2019-12-05T14:41:43+08:00" />
+<meta property="og:url" content="https://ffreshman.github.io/posts/css-box/" />
+<meta property="article:published_time" content="2019-12-12T14:01:09+08:00" />
+<meta property="article:modified_time" content="2019-12-12T14:01:09+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="how to blog"/>
-<meta name="twitter:description" content="如何用hugo搭建自己的个人博客"/>
+<meta name="twitter:title" content="Css Box"/>
+<meta name="twitter:description" content="CSS 盒模型"/>
 
 
 <link rel="stylesheet" href="/css/github-markdown.css" />
@@ -76,47 +77,69 @@ how to blog
       </div>
       <header>
         <h2 class="ui header">
-          how to blog
-          <div class="sub header">@  · Thursday, Dec 5, 2019 · 1 minute read · Update at Dec 5, 2019</div>
+          Css Box
+          <div class="sub header">@ FFreshman · Thursday, Dec 12, 2019 · 1 minute read · Update at Dec 12, 2019</div>
         </h2>
       </header>
-      <article style="margin-top: 2rem;"><h1 id="hugo">如何用hugo搭建自己的个人博客</h1>
-<h2 id="1hugohttpsgithubcomgohugoiohugoreleases">1.下载<a href="https://github.com/gohugoio/hugo/releases">Hugo</a></h2>
-<pre><code>下载windows64位版本的压缩包，解压到一个文件夹（最好全英文），接着把安装路劲添加到path环境变量中，试着在控制台输入查看版本
-</code></pre>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">version</span> 
-</code></pre></div><h2 id="2hugohttpsgohugoiogettingstartedquickstart">2.查看<a href="https://gohugo.io/getting-started/quick-start/">Hugo官网</a>搭建博客</h2>
-<ol>
-<li>在你要创建的目录下输入</li>
-</ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">hugo</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">site</span> <span style="color:#a6e22e">quickstart</span>(<span style="color:#a6e22e">取一个你喜欢的名字比如ffreshman</span>.<span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">io</span><span style="color:#f92672">-</span><span style="color:#a6e22e">creator</span>)
-</code></pre></div><ol start="2">
-<li>cd进入你创建好的目录中运行以下代码</li>
-</ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">git</span> <span style="color:#a6e22e">init</span>
-<span style="color:#a6e22e">git</span> <span style="color:#a6e22e">submodule</span> <span style="color:#a6e22e">add</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//github.com/budparr/gohugo-theme-ananke.git themes/ananke
-</span></code></pre></div><p>这里的ananke是你的主题，后期可以选择跟换合适的主题</p>
-<ol start="3">
-<li>接下来创建一个markdown文件，来写你文章的主体部分</li>
-</ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">hugo</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">posts</span><span style="color:#f92672">/</span><span style="color:#a6e22e">你需要的博客标题</span>.<span style="color:#a6e22e">md</span>
-</code></pre></div><p>关于怎么写<a href="https://www.mdeditor.com/">markdown</a></p>
-<ol start="4">
-<li>通过hugo-sever预览你的博客</li>
-</ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">D</span>
-</code></pre></div><p>这里你的draft状态保持为true</p>
-<p><img src="/images/severs.png" alt="sever"></p>
-<ol start="5">
-<li>接着创建一个准备上传到github的页面public</li>
-</ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">hugo</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">D</span>
-</code></pre></div><p>然后把这个public上传到github仓库就可以查看你的博客了</p></article>
+      <article style="margin-top: 2rem;"><p>CSS 盒模型</p>
+<h1 id="css-httpsdevelopermozillaorgzhcndocswebcsscssboxmodelintroductiontothecssboxmodel"><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">CSS 盒模型</a></h1>
+<h2 id="heading">一、盒模型简介</h2>
+<p><strong>当对一个文档进行布局（lay out）的时候，浏览器的渲染引擎会根据标准之一的 CSS 基础框盒模型（CSS basic box model），将所有元素表示为一个个矩形的盒子（box）。CSS 决定这些盒子的大小、位置以及属性（例如颜色、背景、边框尺寸…）。</strong></p>
+<p><strong>每个盒子由四个部分（或称区域）组成，其效用由它们各自的边界（Edge）所定义。如图，与盒子的四个组成区域相对应，每个盒子有四个边界：内容边界 <em>Content edge</em>、内边距边界 <em>Padding Edge</em>、边框边界 <em>Border Edge</em>、外边框边界 <em>Margin Edge</em>。</strong></p>
+<p><img src="/images/boxmodel.png" alt=""></p>
+<h1 id="-">二、 盒模型结构介绍</h1>
+<h2 id="heading1">盒模型分类</h2>
+<h3 id="1abbr-titlew3ccontentboxabbr"><strong>1.<!-- raw HTML omitted -->content-box<!-- raw HTML omitted --></strong></h3>
+<blockquote>
+<p><strong>属性 width,height 只包含内容 content，不包含 border 和 padding。</strong></p>
+</blockquote>
+<h3 id="2-abbr-titleieborderboxabbr"><strong>2. <!-- raw HTML omitted -->border-box<!-- raw HTML omitted --></strong></h3>
+<blockquote>
+<p><strong>属性 width,height 包含 border 和 padding，指的是 content+padding+border。</strong></p>
+</blockquote>
+<h4 id="boxsizingcontentbox">两者可以通过<code>box-sizing</code>属性切换，默认是<code>content-box</code></h4>
+<h2 id="1-contentarea">(1) content-area</h2>
+<blockquote>
+<p><strong>内容区域 content area ，由内容边界限制，容纳着元素的“真实”内容，例如文本、图像，或是一个视频播放器。它的尺寸为内容宽度（或称 content-box 宽度）和内容高度（或称 content-box 高度）。它通常含有一个背景颜色（默认颜色为透明）或背景图像。</strong></p>
+</blockquote>
+<h2 id="2-paddingarea">(2) padding-area</h2>
+<blockquote>
+<p><strong>内边距区域 padding area 由内边距边界限制，扩展自内容区域，负责延伸内容区域的背景，填充元素中内容与边框的间距。它的尺寸是 padding-box 宽度 和 padding-box 高度。</strong></p>
+</blockquote>
+<p><strong>内边距的粗细可以由 <code>padding-top</code>、<code>padding-right</code>、<code>padding-bottom</code>、<code>padding-left</code>，和简写属性 padding 控制。</strong></p>
+<h2 id="3-borderarea">(3) border-area</h2>
+<blockquote>
+<p><strong>边框区域 border area 由边框边界限制，扩展自内边距区域，是容纳边框的区域。其尺寸为 border-box 宽度 和 border-box 高度。</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>边框的粗细由 border-width 和简写的 <code>border</code> 属性控制。如果 <code>box-sizing</code> 属性被设为 border-box，那么边框区域的大小可明确地通过 <code>width</code>、<code>min-width</code>, <code>max-width</code>、<code>height</code>、<code>min-height</code>，和 <code>max-height</code> 属性控制。假如框盒上设有背景（background-color 或 background-image），背景将会一直延伸至边框的外沿（默认为在边框下层延伸，边框会盖在背景上）。此默认表现可通过 CSS 属性 background-clip 来改变。</strong></p>
+</blockquote>
+<h2 id="4-marginarea">(4) margin-area</h2>
+<blockquote>
+<p><strong>外边距区域 margin area 由外边距边界限制，用空白区域扩展边框区域，以分开相邻的元素。它的尺寸为 margin-box 宽度 和 margin-box 高度。</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>外边距区域的大小由 <code>margin-top</code>、<code>margin-right</code>、<code>margin-bottom</code>、<code>margin-left</code>，和简写属性 <code>margin</code> 控制。</strong></p>
+</blockquote>
+<h2 id="margin--margin">margin 的合并现象(合并现象仅限上下 margin)</h2>
+<h3 id="1-block--margin">(1)上下 block 之间的 margin</h3>
+<blockquote>
+<p><strong>除最顶上与最下面的 block 元素中间的 block 会出现 margin 合并</strong></p>
+<p><strong>如果设置了属性<code>display：inlineblock</code>，那么 margin 则会分开计算不会合并</strong></p>
+</blockquote>
+<h3 id="2-block--margin">(2)最上下与父级 block 元素的 margin</h3>
+<blockquote>
+<p><strong>如果子元素的 border 与父元素的 margin 之间没有 border、padding，或者没有设置 overflow：hidden 属性的时候，margin 会合并</strong></p>
+</blockquote>
+<p><img src="/images/box1.png" alt="">
+<img src="/images/box2.png" alt=""></p></article>
     </section>
 
     <footer class="ui attached segment dream-tags">
       
-        <span>No Tags</span>
+        
+          <a class="ui label" href="/tags/css" title="css">css</a>
+        
       
     </footer>
 
