@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+CSS总结
+</title>
+
+    
+
+
+  
+  <meta name="author" content="FFreshman" />
+  <meta name="description" content="对CSS的布局、层叠、动画做一个总结
+" />
+
+
+
+<meta name="generator" content="Hugo 0.60.1" />
+
+<link rel="canonical" href="https://ffreshman.github.io/posts/css/" />
+
+
+<meta property="og:title" content="CSS总结" />
+<meta property="og:description" content="对CSS的布局、层叠、动画做一个总结" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ffreshman.github.io/posts/css/" />
+<meta property="article:published_time" content="2019-12-17T13:43:05+08:00" />
+<meta property="article:modified_time" content="2019-12-17T13:43:05+08:00" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CSS总结"/>
+<meta name="twitter:description" content="对CSS的布局、层叠、动画做一个总结"/>
+
+
+<link rel="stylesheet" href="/css/github-markdown.css" />
+<link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/site.css" />
+
+
+
+
+
+  </head>
+
+  
+  <body>
+  
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'https:\/\/ffreshman.github.io\/'"></i>
+  </div>
+  <div class="item">
+    <i id="theme-switch" class="large link icon" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment">
+      <div class="ui right ribbon black inverted label" onclick="savePostAsImg()">
+        <i class="save link icon"></i>
+      </div>
+      <header>
+        <h2 class="ui header">
+          CSS总结
+          <div class="sub header">@ FFreshman · Tuesday, Dec 17, 2019 · 2 minute read · Update at Dec 17, 2019</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><p><strong>对CSS的布局、层叠、动画做一个总结</strong></p>
+<h1 id="css">一、CSS布局</h1>
+<p><strong>其实页面本身的默认布局是依靠文档流来实现的，简单来说就是块级元素<code>display:block</code>独占一行，行内元素<code>display:inline</code>按从左到右依次排列，如果我们要去实现自己想要的布局就得用以下3种布局方式。</strong></p>
+<p><strong>首先我们要知道如何去选择一个布局</strong></p>
+<p><img src="/images/choose.png" alt=""></p>
+<h2 id="1-float"><strong>(1) float</strong></h2>
+<p><strong>float布局大多用在ie浏览器上，那么float布局怎么使用呢</strong></p>
+<h3 id="1classclearfix"><strong>1、在浮动元素的父元素上加上<code>class=clearfix</code></strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">clearfix</span>:<span style="color:#a6e22e">after</span>{	
+  <span style="color:#960050;background-color:#1e0010">c</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#960050;background-color:#1e0010">&#34;</span>;
+  <span style="color:#66d9ef">display</span>:<span style="color:#66d9ef">block</span>;
+  <span style="color:#66d9ef">clear</span>:<span style="color:#66d9ef">both</span>;
+}
+</code></pre></div><p><strong>注意在这个里面不要写除上面代码以外的样式，否则还是不能包裹，可以给父元素再加一个class以写入其他样式</strong></p>
+<h3 id="2-"><strong>2、 在子元素中写上</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">float</span>:<span style="color:#a6e22e">left</span><span style="color:#f92672">|</span><span style="color:#f92672">right</span>
+</code></pre></div><p><strong>在<a href="https://ffreshman.github.io/posts/css-box/">盒模型</a>那篇博客里有写到如果元素使用了float，则不会出现margin合并,这里还有个ie6/7的一个双倍margin的bug存在，可以选择在父元素上加上<code>display:inline-block</code></strong></p>
+<p><strong>再介绍一个垂直对齐属性：<code>vertical-align</code></strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">vertical-align</span>:<span style="color:#a6e22e">middle</span><span style="color:#f92672">;</span>
+</code></pre></div><p><strong>可以实现元素在垂直方向上的居中，具体用法可以参考<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/vertical-align">vertical-align</a></strong></p>
+<p><strong>Tip1 outline</strong></p>
+<p>当使用<code>outline：1px solid red;</code>的时候，border-box的width这时候会把border排除在外，outline的意思就是宽度实际上在盒子的外边，而不计入width</p>
+<p><strong>而且这时候会出现margin重叠现象</strong></p>
+<p><strong>Tip2 关于负margin</strong></p>
+<p><strong>margin:left和margin:top的参考对象是相邻元素，如果为负，则会使得自己向上或向左移动</strong></p>
+<p><strong>margin:right和margin:bottom的参考对象是自己，如果为负，则会使得相邻元素向自己靠近</strong></p>
+<p>eg：<a href="http://js.jirengu.com/qawin/2/edit?html,css">最后一行有负margin的使用</a></p>
+<h2 id="2-flex"><strong>(2) flex</strong>（一般用于一维布局）</h2>
+<p><strong>首先flex布局分为容器container和内容items两部分</strong></p>
+<h2 id="container"><strong>container</strong></h2>
+<h3 id="1-displayflex"><strong>1、 <code>display:flex</code></strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span>{
+    <span style="color:#66d9ef">display</span>:<span style="color:#66d9ef">flex</span><span style="color:#f92672">|</span><span style="color:#66d9ef">inline</span><span style="color:#f92672">-</span><span style="color:#66d9ef">flex</span>;
+    }
+</code></pre></div><p>区别跟block和inline-block差不多，可以使一个元素变为flex布局</p>
+<h3 id="2-item"><strong>2、 改变item的流动方向</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span>{
+Flex-direction:<span style="color:#a6e22e">row</span>(<span style="color:#66d9ef">default</span>)<span style="color:#f92672">|</span><span style="color:#66d9ef">row</span><span style="color:#f92672">-</span><span style="color:#66d9ef">reverse</span><span style="color:#f92672">|</span><span style="color:#66d9ef">column</span><span style="color:#f92672">|</span><span style="color:#66d9ef">column</span><span style="color:#f92672">-</span><span style="color:#66d9ef">reverse</span>
+}
+</code></pre></div><p>可以让items按行或者逆行，列或者逆列排列</p>
+<p><img src="/images/css/row.png" alt=""></p>
+<h3 id="3-"><strong>3、 是否换行</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span>{
+    Flex-wrap:<span style="color:#66d9ef">nowrap</span><span style="color:#f92672">|</span><span style="color:#66d9ef">wrap</span><span style="color:#f92672">|</span><span style="color:#66d9ef">wrap</span><span style="color:#f92672">-</span><span style="color:#66d9ef">reverse</span>;
+    }
+</code></pre></div><p>nowrap为默认属性，不换行的话会使得元素的width变小挤在，wrap-reverse一般不用</p>
+<h3 id="4-x"><strong>4、 主轴对齐方式（默认是x轴）</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span>{
+    <span style="color:#66d9ef">justify-content</span>:<span style="color:#66d9ef">center</span>;
+    }
+</code></pre></div><p><img src="/images/css/just.png" alt=""></p>
+<p><strong><code>space-around</code>和<code>space-evenly</code>的区别是，前者是元素两边空间一样大，后者是4个空隙大小一样大</strong></p>
+<h3 id="5-"><strong>5、 垂直主轴方向对齐</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span>{
+    Align-items:<span style="color:#66d9ef">center</span><span style="color:#f92672">|</span><span style="color:#66d9ef">flex</span><span style="color:#f92672">-</span><span style="color:#66d9ef">start</span><span style="color:#f92672">|</span><span style="color:#66d9ef">flex</span><span style="color:#f92672">-</span><span style="color:#66d9ef">end</span><span style="color:#f92672">|</span><span style="color:#66d9ef">stretch</span>
+    }
+</code></pre></div><p><img src="/images/css/items.png" alt=""></p>
+<h3 id="6-"><strong>6、 多行内容对齐方式</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span>{
+    Align-content:<span style="color:#66d9ef">center</span><span style="color:#f92672">|</span><span style="color:#66d9ef">flex</span><span style="color:#f92672">-</span><span style="color:#66d9ef">start</span><span style="color:#f92672">|</span><span style="color:#66d9ef">flex</span><span style="color:#f92672">-</span><span style="color:#66d9ef">end</span><span style="color:#f92672">|</span><span style="color:#66d9ef">stretch</span>
+    }
+</code></pre></div><h2 id="items"><strong>items</strong></h2>
+<h3 id="1-order"><strong>1、 <code>order</code></strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">items</span>{
+    <span style="color:#66d9ef">order</span>:<span style="color:#ae81ff">1</span>
+}
+</code></pre></div><p>order默认为0，可以为负，从小到大依次决定items在container中的排列顺序</p>
+<h3 id="2-flexgrowflexshrink"><strong>2、 <code>Flex-grow</code>、<code>flex-shrink</code></strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">items</span>{
+    <span style="color:#66d9ef">flex-grow</span>:<span style="color:#ae81ff">1</span>
+}
+</code></pre></div><p><code>flex-grow</code>默认是0，是用来分配多余空间的，当页面被拉升时，数字大的会占据更多比例的多余空间</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">items</span>{
+   <span style="color:#66d9ef">flex-shrink</span>:<span style="color:#ae81ff">1</span>
+}
+</code></pre></div><p><code>flex-shrink</code>默认是1，用来决定当空间不够时，哪个元素给出的空间更多，数字越大当缩小的越快，flex-shrink=0的时候就是铁公鸡，一毛不拔</p>
+<h3 id="3-basis"><strong>3、 <code>basis</code></strong></h3>
+<p><strong>跟width属性差不多，可以相互代替</strong></p>
+<blockquote>
+<p>当<code>grow</code>、<code>shrink</code>、<code>basis</code>一起写的时候可以用<code>flex</code></p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">items</span>{
+   <span style="color:#66d9ef">flex</span>:<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">30</span><span style="color:#66d9ef">px</span>;
+}
+</code></pre></div><p><strong>注：如果要写shrink则一定要写basis</strong></p>
+<p><strong>最后推荐一个flex布局练习小游戏<a href="https://flexboxfroggy.com/">flexfroggy</a></strong></p>
+<h2 id="3-grid"><strong>(3) grid</strong>（一般用于二维布局）</h2>
+<h3 id="gridflexcontaineritems"><strong>grid和flex一样也分为container和items</strong></h3>
+<h2 id="container1"><strong>container</strong></h2>
+<h3 id="1-container"><strong>1、 成为container</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span>{
+    <span style="color:#66d9ef">display</span>:<span style="color:#66d9ef">grid</span><span style="color:#f92672">|</span><span style="color:#66d9ef">inline</span><span style="color:#f92672">-</span><span style="color:#66d9ef">grid</span>;
+}
+</code></pre></div><h3 id="2-gird"><strong>2、 设置gird的行和列</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span>{
+    grid-template-row:<span style="color:#ae81ff">40</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">50</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">auto</span> <span style="color:#ae81ff">50</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">40</span><span style="color:#66d9ef">px</span>;
+    grid-template-column:<span style="color:#ae81ff">25</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">auto</span>;
+}
+</code></pre></div><p><img src="/images/css/gird.png" alt=""></p>
+<p><strong>这个步骤是把一个元素用横竖两种线划分为一个个区域</strong></p>
+<p>你甚至可以给每条线取名字</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span>{
+    grid-template-row:[<span style="color:#66d9ef">first</span>]<span style="color:#ae81ff">40</span><span style="color:#66d9ef">px</span> [lin2]<span style="color:#ae81ff">50</span><span style="color:#66d9ef">px</span> [line3]<span style="color:#66d9ef">auto</span> [line4]<span style="color:#ae81ff">50</span><span style="color:#66d9ef">px</span> [<span style="color:#66d9ef">last</span>]<span style="color:#ae81ff">40</span><span style="color:#66d9ef">px</span>;
+    grid-template-column:<span style="color:#ae81ff">25</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">auto</span>;
+}
+</code></pre></div><h3 id="abbr-titlefreespacefrabbr"><strong>还有一种划分区域划分单位是<!-- raw HTML omitted -->fr<!-- raw HTML omitted --></strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span>{
+    grid-template-row:<span style="color:#ae81ff">1</span>fr <span style="color:#ae81ff">1</span>fr <span style="color:#ae81ff">1</span>fr
+    <span style="color:#66d9ef">grid</span><span style="color:#f92672">-</span>template-column<span style="color:#f92672">:</span><span style="color:#ae81ff">25</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">auto</span>;
+}
+</code></pre></div><h3 id="3-gap"><strong>3、 gap</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span>{
+    gird-row-gap:<span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">grid-column-gap</span>:<span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+}
+</code></pre></div><p><img src="/images/css/gap.png" alt=""></p>
+<p><strong>可以设置块之间的间隙是多少</strong>
+<strong>Tips</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span>{
+    grid-template-row:<span style="color:#ae81ff">30</span><span style="color:#66d9ef">px</span> <span style="color:#a6e22e">repeat</span>(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>)
+    <span style="color:#66d9ef">grid</span><span style="color:#f92672">-</span>template-column<span style="color:#f92672">:</span><span style="color:#ae81ff">25</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">auto</span> <span style="color:#ae81ff">30</span><span style="color:#66d9ef">px</span>;
+}
+</code></pre></div><p><code>repeat</code>可以重复相同数值的区域</p>
+<h2 id="items1"><strong>items</strong></h2>
+<p><strong>当我们把区域划分好以后只需把内容指定区域就可以实现布局了</strong></p>
+<h2 id="items2"><strong>items</strong></h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">items</span>{
+    <span style="color:#66d9ef">grid-column-start</span>:<span style="color:#ae81ff">2</span>;
+    <span style="color:#66d9ef">grid-column-end</span>:<span style="color:#ae81ff">5</span>;
+    <span style="color:#66d9ef">grid-row-start</span>:<span style="color:#ae81ff">3</span>;
+    <span style="color:#66d9ef">grid-row-start</span>:<span style="color:#ae81ff">4</span>;
+}
+</code></pre></div><p><strong>就可以将这个元素放到相应范围的gird空间里</strong></p>
+<p><strong>Tips</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">items</span>{
+    gird-row:<span style="color:#ae81ff">4</span><span style="color:#f92672">/</span><span style="color:#ae81ff">5</span>;
+    gird-column:<span style="color:#ae81ff">2</span><span style="color:#f92672">/</span><span style="color:#ae81ff">3</span>;
+}
+</code></pre></div><p><strong>这是上面写法的简化</strong></p>
+<h2 id="gridtemplatearea"><strong><code>grid-template-area</code></strong></h2>
+<h3 id="grid">接下来介绍一种更好用的grid分区方式</h3>
+<p><img src="/images/css/area.png" alt=""></p>
+<p><strong>把每个方格都取名，之后只要把相应的items放入其中即可，而不用再写横着从那条线到那条线，竖着从哪条到那条</strong></p>
+<p><strong>Tips</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span>{
+    gird-area:<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">3</span><span style="color:#f92672">/</span><span style="color:#ae81ff">4</span><span style="color:#f92672">/</span><span style="color:#ae81ff">5</span>;
+}
+</code></pre></div><p><strong><code>grid-area</code>是按<code>gird-row-start</code>、<code>gird-column-start</code>、<code>gird-row-end</code>、<code>grid-column-end</code>的顺序的简写</strong></p>
+<p><strong>最后推荐一个gird布局练习小游戏<a href="https://cssgridgarden.com/#zh-cn">gird-garden</a></strong></p>
+<h1 id="-">二、 浏览器渲染原理</h1>
+<h2 id="1-"><strong>（1） 什么叫渲染</strong></h2>
+<p><strong>浏览器的渲染简单来说就是把html文件，css文件和JavaScript文件组合起来并解析成浏览器上你能看到的东西，整个过程非常复杂，主要分为以下几步</strong></p>
+<ol>
+<li>根据HTML构建HTML树（DOM）</li>
+<li>根据CSS构建CSSDOM</li>
+<li>将两棵树合并为render tree</li>
+<li>Layout布局根据文档流和盒模型计算大小和位置</li>
+<li>paint绘制（把边框文字阴影等颜色绘制出来）</li>
+<li>compose合成（根据层叠关系展示画面）</li>
+</ol>
+<p><img src="/images/css/tree.png" alt=""></p>
+<h2 id="2-1"><strong>（2） 更新样式</strong></h2>
+<p><strong>当我们使用js的时候，网页的显示内容会发生改变，这时候发生了什么呢，其实就是浏览器重新渲染的过程，但是浏览器也不傻，他会选最省资源的方式去更新样式，所以就有了3种样式更新的路径</strong></p>
+<p><img src="/images/css/render.png" alt=""></p>
+<p><strong>不同的属性改变会使用不同的路径进行样式更新，但是css的行为你永远无法预测，所以我们可以用穷举法去测试，有一个<a href="https://csstriggers.com/">参考网站</a></strong></p>
+<h1 id="-css">三、 CSS动画</h1>
+<p><strong>这里简单介绍一下用<code>animation</code>和<code>transform</code>做动画，之后再js篇在重新整理</strong></p>
+<h2 id="1-transformhttpsdevelopermozillaorgzhcndocswebcsstransform"><strong>1、 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform">transform</a></strong></h2>
+<p><strong>transform有许多功能，这里只介绍常用的4个</strong></p>
+<p><strong>Tips</strong></p>
+<blockquote>
+<p>inline 元素不支持transform，需要先设置<code>display：block</code></p>
+</blockquote>
+<h3 id="1-translate"><strong>(1) translate(位移)</strong></h3>
+<h4 id="1x">1.X轴方向</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">    .<span style="color:#a6e22e">items</span>{
+        <span style="color:#66d9ef">transform</span>:translateX(<span style="color:#960050;background-color:#1e0010">&lt;</span>length<span style="color:#f92672">-</span>percentage<span style="color:#960050;background-color:#1e0010">&gt;</span>)
+    }
+</code></pre></div><h4 id="2y">2.Y轴方向</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">    .<span style="color:#a6e22e">items</span>{
+        <span style="color:#66d9ef">transform</span>:translateY(<span style="color:#960050;background-color:#1e0010">&lt;</span>length<span style="color:#f92672">-</span>percentage<span style="color:#960050;background-color:#1e0010">&gt;</span>)
+    }
+</code></pre></div><h4 id="3z">3.Z轴方向</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">    .<span style="color:#a6e22e">items</span>{
+        <span style="color:#66d9ef">transform</span>:translateZ(<span style="color:#960050;background-color:#1e0010">&lt;</span>length<span style="color:#f92672">-</span>percentage<span style="color:#960050;background-color:#1e0010">&gt;</span>)
+    }
+</code></pre></div><p><strong>Tips</strong></p>
+<blockquote>
+<p><strong>1.</strong> Z轴的平移需要在其父元素上加上perspective，也就是3维坐标系原点，这个点位于屏幕内部，比如</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">father</span>{
+    <span style="color:#66d9ef">perspective</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
+}
+</code></pre></div><blockquote>
+<p><strong>2.</strong> 3个坐标可以写在一起</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">element</span>{
+    <span style="color:#66d9ef">transform</span>:translate(x,y,z);
+}
+</code></pre></div><p><strong>同样需要指定原点坐标</strong></p>
+<h3 id="2-scale"><strong>(2) scale(缩放)</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">element</span>{
+    <span style="color:#66d9ef">transform</span>:scaleX(<span style="color:#960050;background-color:#1e0010">&lt;</span>number<span style="color:#960050;background-color:#1e0010">&gt;</span>);
+    <span style="color:#66d9ef">transform</span>:scaleY(<span style="color:#960050;background-color:#1e0010">&lt;</span>number<span style="color:#960050;background-color:#1e0010">&gt;</span>);
+    <span style="color:#66d9ef">transform</span>:scale(<span style="color:#960050;background-color:#1e0010">&lt;</span>number<span style="color:#960050;background-color:#1e0010">&gt;</span>,<span style="color:#960050;background-color:#1e0010">&lt;</span>number<span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010">?</span>)
+}
+</code></pre></div><h3 id="3-rotate"><strong>(3) rotate(旋转)</strong></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">element</span>{
+    <span style="color:#66d9ef">transform</span>:rotateX(<span style="color:#ae81ff">20</span><span style="color:#66d9ef">deg</span>);
+}
+</code></pre></div><p><strong>也分为X,Y,Z轴正角度是顺时针旋转,Z轴旋转是在平面上的投影
+一般用于制作loading图标</strong></p>
+<h3 id="4-skew"><strong>(4) skew(倾斜)</strong></h3>
+<p><strong>语法与旋转大同小异，正角度默认倾斜是逆时针</strong></p>
+<p><strong>多重效果可以写在一个transform里</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">element</span>{
+<span style="color:#66d9ef">transform</span>:translate(x,y) scale(<span style="color:#ae81ff">30</span><span style="color:#66d9ef">deg</span>);
+}
+</code></pre></div><h2 id="2-transition"><strong>2、 transition(过渡)</strong></h2>
+<p><strong><code>transition</code>可以设置动画初始和结束状态中间的补帧，其属性值有</strong></p>
+<ol>
+<li>属性名：可以单独设置某个属性的过渡，也可以设置为All，即所有属性过渡</li>
+<li>时长：过渡时长</li>
+<li>过渡方方式：ease|ease-in|ease-out|linear|steps等</li>
+<li>延迟：过几秒以后触发动画</li>
+</ol>
+<p><strong>Tips</strong></p>
+<blockquote>
+<p><code>display:none</code>到block是无法过渡的，要实现从有到无建议使用<code>visibility:hidden</code>属性实现</p>
+</blockquote>
+<h2 id="3-animation"><strong>3、 animation</strong></h2>
+<h3 id="animationkeyframesanimation"><strong>animation包括两部分，<code>@keyframes</code>和<code>animation</code></strong></h3>
+<h2 id="1keyframeshttpsdevelopermozillaorgenusdocswebcsskeyframes">(1)<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes"><code>@keyframes</code></a></h2>
+<p>**<code>@keyframes</code>可以定义多个transform动作，并设置他们的时间范围</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">identifier</span> {
+  <span style="color:#f92672">0</span><span style="color:#f92672">%</span> { <span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">0</span>; }
+  <span style="color:#f92672">30</span><span style="color:#f92672">%</span> { <span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">px</span>; }
+  <span style="color:#f92672">68</span><span style="color:#f92672">%</span><span style="color:#f92672">,</span> <span style="color:#f92672">72</span><span style="color:#f92672">%</span> { <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">px</span>; }
+  <span style="color:#f92672">100</span><span style="color:#f92672">%</span> { <span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>; }
+}
+</code></pre></div><h2 id="2-animationhttpsdevelopermozillaorgenusdocswebcsscssanimationsusingcssanimations">(2) <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations"><code>animation</code></a></h2>
+<p><strong><code>animation</code>的属性分以下几种</strong></p>
+<ol>
+<li><strong>animation-name</strong>:指定由@keyframes描述的关键帧名称</li>
+<li><strong>animation-duration</strong>:设置动画一个周期的时长</li>
+<li><strong>animation-timing-function</strong>:设置动画速度， 即通过建立加速度曲线，设置动画在关键帧之间是如何变化</li>
+<li><strong>animation-delay</strong>:设置延时，即从元素加载完成之后到动画序列开始执行的这段时间</li>
+<li><strong>animation-iteration-count</strong>:设置动画重复次数， 可以指定infinite无限次重复动画infinite(无限次)</li>
+<li><strong>animation-direction</strong>:设置动画在每次运行完后是反向运行还是重新回到开始位置重复运行alternate(往返)|normal|reserver|</li>
+<li><strong>animation-fill-mode</strong>:指定动画执行前后如何为目标元素应用样式 forward（可以让动画停在最后一帧）</li>
+<li><strong>animation-play-state</strong>:允许暂停和恢复动画</li>
+</ol>
+<h1 id="oooooooooooooooooooooooook"><strong>oooooooooooooooooooooooook,这个博客写了我一天！！！！！！！！！！！！！！</strong></h1></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+        
+          <a class="ui label" href="/tags/css" title="CSS">CSS</a>
+        
+      
+    </footer>
+
+    
+
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+    </div>
+
+    <h3 class="ui header">&#39;s blog<div class="sub header" style="margin-top: 0.5rem;"></div>
+    </h3>
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="/posts">
+        <i class="archive icon" title="Archives"></i>
+      </a>
+      
+      <a class="item" href="/tags">
+        <i class="tags icon" title="All Tags"></i>
+      </a>
+      <a class="item" href="/categories">
+        <i class="th list icon" title="All Categories"></i>
+      </a>
+    </div>
+  </section>
+
+  
+  <section class="ui attached center aligned segment dream-tags">
+    
+      <a class="ui label" href="/tags/css" title="css">css</a>
+    
+      <a class="ui label" href="/tags/html" title="html">html</a>
+    
+      <a class="ui label" href="/tags/%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B" title="入门教程">入门教程</a>
+    
+  </section>
+  
+
+  
+  <section class="ui attached segment dream-categories">
+    <div class="ui accordion">
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/css" class="item">css</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://ffreshman.github.io/posts/css/" class="item">CSS总结</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://ffreshman.github.io/posts/css-box/" class="item">Css Box</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/html" class="item">html</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://ffreshman.github.io/posts/html.label/" class="item">HTML</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://ffreshman.github.io/posts/html/" class="item">HTML</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+    </div>
+  </section>
+  
+
+  <section class="ui bottom attached center aligned segment">
+      
+      <p>© 2019 小咸鱼的博客</p>
+      
+      <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+  </section>
+</article>
+
+  </div>
+</div>
+
+        </section>
+        <section class="back">
+          
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'https:\/\/ffreshman.github.io\/'"></i>
+  </div>
+  <div class="item">
+    <i id="theme-switch" class="large link icon" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          <div class="ui centered relaxed grid dream-grid dream-back">
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">Social Links</h3>
+      </div>
+      <div class="ui attached segment">
+        <nav class="ui secondary menu dream-menu">
+          
+
+          
+
+          
+
+          
+
+          
+        </nav>
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+  
+</div>
+
+        </section>
+      </div>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+<script src="/js/semantic.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/theme.js"></script>
+<script src="/js/html2canvas.min.js"></script>
+
+
+
+  </body>
+</html>
