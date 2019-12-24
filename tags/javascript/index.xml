@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>JavaScript on 小咸鱼的博客</title>
+    <title>javascript on 小咸鱼的博客</title>
     <link>https://ffreshman.github.io/tags/javascript/</link>
-    <description>Recent content in JavaScript on 小咸鱼的博客</description>
+    <description>Recent content in javascript on 小咸鱼的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
-    <lastBuildDate>Fri, 20 Dec 2019 18:54:53 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 24 Dec 2019 17:03:52 +0800</lastBuildDate>
     
 	<atom:link href="https://ffreshman.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Js Grammar</title>
+      <link>https://ffreshman.github.io/posts/js-grammar/</link>
+      <pubDate>Tue, 24 Dec 2019 17:03:52 +0800</pubDate>
+      
+      <guid>https://ffreshman.github.io/posts/js-grammar/</guid>
+      <description>&lt;h1 id=&#34;js-&#34;&gt;JS 语法概述&lt;/h1&gt;</description>
+    </item>
     
     <item>
       <title>JavaScript</title>
