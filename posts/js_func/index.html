@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+JS 函数
+</title>
+
+    
+
+
+  
+  <meta name="author" content="FFreshman" />
+  <meta name="description" content="JS 函数" />
+
+
+
+<meta name="generator" content="Hugo 0.60.1" />
+
+<link rel="canonical" href="https://ffreshman.github.io/posts/js_func/" />
+
+
+<meta property="og:title" content="JS 函数" />
+<meta property="og:description" content="JS 函数" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ffreshman.github.io/posts/js_func/" />
+<meta property="article:published_time" content="2020-01-02T20:04:21+08:00" />
+<meta property="article:modified_time" content="2020-01-02T20:04:21+08:00" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="JS 函数"/>
+<meta name="twitter:description" content="JS 函数"/>
+
+
+<link rel="stylesheet" href="/css/github-markdown.css" />
+<link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/site.css" />
+
+
+
+
+
+  </head>
+
+  
+  <body>
+  
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'https:\/\/ffreshman.github.io\/'"></i>
+  </div>
+  <div class="item">
+    <i id="theme-switch" class="large link icon" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment">
+      <div class="ui right ribbon black inverted label" onclick="savePostAsImg()">
+        <i class="save link icon"></i>
+      </div>
+      <header>
+        <h2 class="ui header">
+          JS 函数
+          <div class="sub header">@ FFreshman · Thursday, Jan 2, 2020 · 2 minute read · Update at Jan 2, 2020</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><h1 id="js-">JS 函数</h1>
+<h2 id="-js-"><strong>在 JS 中，函数也是一种对象，他拥有以下几种要素</strong></h2>
+<ol>
+<li><strong>调用时机</strong></li>
+<li><strong>作用域</strong></li>
+<li><strong>闭包</strong></li>
+<li><strong>形式参数</strong></li>
+<li><strong>返回值</strong></li>
+<li><strong>调用栈</strong></li>
+<li><strong>函数提升</strong></li>
+<li><strong>argument （箭头函数除外）</strong></li>
+<li><strong>this （箭头函数除外）</strong></li>
+</ol>
+<h3 id="this"><strong>接下来会重点介绍一下调用时机以及<code>this</code></strong></h3>
+<h1 id="heading">一、函数的调用时机</h1>
+<h3 id="heading1">当一个函数被写好以后，并不会马上执行，而是等待被调用，所以什么时候被调用就决定了函数的输出结果是什么</h3>
+<h1 id="exm1"><strong>exm1:</strong></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fn</span>() {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span>);
+}
+<span style="color:#a6e22e">fn</span>();
+</code></pre></div><h3 id="1">这时候会在控制台打印出数字<code>1</code></h3>
+<h1 id="exm2"><strong>exm2:</strong></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fn</span>() {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span>);
+}
+<span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+<span style="color:#a6e22e">fn</span>();
+</code></pre></div><h3 id="2fna2-a--2--2fna2-1">这时候会在控制台打印出数字<code>2</code>，因为<code>fn()</code>的调用时间在<code>a=2</code>之后，这时候 a 已经被重新赋值为 2 了，所以输出结果是 2，如果这里<code>fn()</code>调用在<code>a=2</code>之前，则会输出 1</h3>
+<h1 id="exm3"><strong>exm3:</strong></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fn</span>() {
+  <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span>);
+  }, <span style="color:#ae81ff">0</span>);
+}
+
+<span style="color:#a6e22e">fn</span>();
+<span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+</code></pre></div><h3 id="2-settimeout-fn-aa2consoleloga">这个代码会输出<strong>2</strong>，因为 setTimeout()这个函数的意思是等一会执行，所以当你调用 fn()的时候并不会马上输出 a，而是继续执行<code>a=2</code>，然后才执行<code>console.log(a)</code></h3>
+<h1 id="exm4"><strong>exm4:</strong></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">6</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+  <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>);
+  }, <span style="color:#ae81ff">0</span>);
+}
+</code></pre></div><h3 id="-6--6-05-">以上代码的输出结果是 6 个 6，是不是跟你预期的 0-5 有出入</h3>
+<h3 id="settimeout-ii">这是因为当循环执行到<code>setTimeout()</code>的时候并不会马上打印出 i，而是会记下一个事件，”我等下要把<code>i</code>打一次“，然后会继续执行循环</h3>
+<h3 id="-for--i--6settimeout-6--6-ii6-6--6-666666">当 for 循环结束的时候，这时候 i 的值是 6，然后<code>setTimeout()</code>开始执行，因为刚才循环了 6 次，所以会将这个语句也执行 6 次，这时候会把<code>i</code>的值打印出来，但是这时候<code>i=6</code>，所以他就连续打了 6 个 6，是不是 666666。</h3>
+<h3 id="-js-1">但是这种性质其实对新人非常不友好，因为他是反直觉的，所以在最新版的 JS 语法中，做了一个微调</h3>
+<h1 id="exm5"><strong>exm5:</strong></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">6</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+  <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>);
+  }, <span style="color:#ae81ff">0</span>);
+}
+</code></pre></div><h3 id="let-i0-for-05--6-">将<code>let i=0</code>放到 for 的条件里之后，情况发生了改变，这时候的输出结果就是一般人认为的，0-5 的输出 6 个数字</h3>
+<h1 id="this1">二、this</h1>
+<h3 id="-this--this-this--window">首先我们会问，这 this 到底是个什么，试着写一个函数，然后查看他的 this，我们可以看到 this 属性默认是指向 window，要了解他到底是什么我们可以从他的由来和作用入手</h3>
+<p><img src="/images/js/js1/jsf/1.png" alt=""></p>
+<h3 id="-class">加入我们现在要写一个构造函数或者一个 class，我们想要调用将来要创建的对象的属性该怎么办呢，又或者我们在声明一个在声明一个对象的时候调用了这个对象的属性，这时候我们还不知道我们将要创建一个什么对象，这时候我们可以想到，可以设置一个形参给需要得到未知对象属性的函数中，然后在未知对象调用某个函数时，将这个对象的名字作为参数传到函数中，就可以实现这个功能了。</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;fish&#34;</span>,
+  <span style="color:#a6e22e">sayHi</span>(<span style="color:#a6e22e">p</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;大家好我是&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">name</span>);
+  }
+};
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+  }
+  <span style="color:#a6e22e">sayHi</span>(<span style="color:#a6e22e">p</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;大家好我是&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">name</span>);
+  }
+}
+</code></pre></div><h2 id="-sayhi-">这样的话当我们需要调用 sayHi 的时候就可以这样写</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">person</span>.<span style="color:#a6e22e">sayHi</span>(<span style="color:#a6e22e">person</span>);
+</code></pre></div><h2 id="person-p-sayhipnamepersonnamefish">这时候<code>person</code>这个对象就作为 p 参数传入了<code>sayHi()</code>，那<code>p.name===person.name===&quot;fish&quot;</code></h2>
+<h2 id="-this--p-js--this-">其实 this 就是那个形参 p，只不过 JS 把 this 作为一个关键词而把他从函数的参数中隐藏了</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;fish&#34;</span>,
+  <span style="color:#a6e22e">sayHi</span>(<span style="color:#a6e22e">省略this</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;大家好我是&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">name</span>);
+  }
+};
+</code></pre></div><h2 id="personsayhi-js-person-this-sayhi">这时候我们使用<code>person.sayHi()</code>就可以直接调用函数，这是因为 JS 会默认把<code>person</code>当做 this 传入<code>sayHi()</code></h2>
+<h2 id="-this-personsayhicallperson-person-personsayhicallnamebatman-batman-this-namebatman-name-namebatmannamebatman">当然我们可以自定义传入的 this 是什么使用<code>person.sayHi.call(person)</code>，又或者我们可以直接改掉这个 person 传入另外一个<code>person.sayHi.call({name:&quot;batman&quot;})</code>，这时候你会发现，输出结果就是“大家好我是 batman”，因为实际上传入的 this 是对象<code>{name:&quot;batman&quot;}</code>，他的 name 属性是``{name:&ldquo;batman&rdquo;}.name===&quot;batman&rdquo;</h2>
+<h2 id="-objfunctioncallundefinedab-this-this-this--this-ab-this-">所以其实所以函数都可以用 obj.function.call(undefined,a,b,&hellip;)的形式来调用，其中的第一个参数就是 this，如果目标函数没有 this，那么可以用一个其他属性来占位，因为如果不占据这个 this 的位置，后一个参数会被当成 this 传入，a,b&hellip;就是目标函数的其余参数，这种调用函数的方法可以帮助你深刻理解 this 是什么</h2></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+        
+          <a class="ui label" href="/tags/javascript" title="javascript">javascript</a>
+        
+      
+    </footer>
+
+    
+
+    
+      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore="true">
+        <div id="disqus_thread"></div>
+        <script>
+          
+
+
+          var disqus_config = function () {
+            this.page.url = 'https:\/\/ffreshman.github.io\/posts\/js_func\/';  
+            this.page.identifier = '\/posts\/js_func\/'; 
+          };
+
+          (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://' + '...' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </footer>
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+    </div>
+
+    <h3 class="ui header">&#39;s blog<div class="sub header" style="margin-top: 0.5rem;"></div>
+    </h3>
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="/posts">
+        <i class="archive icon" title="Archives"></i>
+      </a>
+      
+      <a class="item" href="/tags">
+        <i class="tags icon" title="All Tags"></i>
+      </a>
+      <a class="item" href="/categories">
+        <i class="th list icon" title="All Categories"></i>
+      </a>
+    </div>
+  </section>
+
+  
+  <section class="ui attached center aligned segment dream-tags">
+    
+      <a class="ui label" href="/tags/css" title="css">css</a>
+    
+      <a class="ui label" href="/tags/html" title="html">html</a>
+    
+      <a class="ui label" href="/tags/http" title="http">http</a>
+    
+      <a class="ui label" href="/tags/javascript" title="javascript">javascript</a>
+    
+      <a class="ui label" href="/tags/url" title="url">url</a>
+    
+      <a class="ui label" href="/tags/%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B" title="入门教程">入门教程</a>
+    
+  </section>
+  
+
+  
+  <section class="ui attached segment dream-categories">
+    <div class="ui accordion">
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/css" class="item">css</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://ffreshman.github.io/posts/css/" class="item">CSS总结</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://ffreshman.github.io/posts/css-box/" class="item">Css Box</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/html" class="item">html</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://ffreshman.github.io/posts/html.label/" class="item">HTML</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://ffreshman.github.io/posts/html/" class="item">HTML</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/http" class="item">http</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://ffreshman.github.io/posts/url/" class="item">URL</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/javascript" class="item">javascript</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://ffreshman.github.io/posts/js_func/" class="item">JS 函数</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://ffreshman.github.io/posts/js_object/" class="item">Js_object</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://ffreshman.github.io/posts/js-grammar/" class="item">Js Grammar</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://ffreshman.github.io/posts/javascript/" class="item">JavaScript</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+    </div>
+  </section>
+  
+
+  <section class="ui bottom attached center aligned segment">
+      
+      <p>© 2020 小咸鱼的博客</p>
+      
+      <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+  </section>
+</article>
+
+  </div>
+</div>
+
+        </section>
+        <section class="back">
+          
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'https:\/\/ffreshman.github.io\/'"></i>
+  </div>
+  <div class="item">
+    <i id="theme-switch" class="large link icon" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          <div class="ui centered relaxed grid dream-grid dream-back">
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">Me</h3>
+        </div>
+        <div class="ui attached segment markdown-body">
+          <p>我是刚入门前端的小咸鱼</p>
+<h2 id="ffreshman">大家好我是FFreshman</h2>
+        </div>
+      </article>
+    </section>
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">Social Links</h3>
+      </div>
+      <div class="ui attached segment">
+        <nav class="ui secondary menu dream-menu">
+          
+
+          
+
+          
+
+          
+
+          
+        </nav>
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+  
+</div>
+
+        </section>
+      </div>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+<script src="/js/semantic.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/theme.js"></script>
+<script src="/js/html2canvas.min.js"></script>
+
+
+
+  </body>
+</html>

@@ -6,10 +6,28 @@
     <description>Recent content on 小咸鱼的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
-    <lastBuildDate>Thu, 26 Dec 2019 17:30:56 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jan 2020 20:47:59 +0800</lastBuildDate>
     
 	<atom:link href="https://ffreshman.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Me</title>
+      <link>https://ffreshman.github.io/about/me/</link>
+      <pubDate>Thu, 02 Jan 2020 20:47:59 +0800</pubDate>
+      
+      <guid>https://ffreshman.github.io/about/me/</guid>
+      <description>&lt;p&gt;我是刚入门前端的小咸鱼&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>JS 函数</title>
+      <link>https://ffreshman.github.io/posts/js_func/</link>
+      <pubDate>Thu, 02 Jan 2020 20:04:21 +0800</pubDate>
+      
+      <guid>https://ffreshman.github.io/posts/js_func/</guid>
+      <description>&lt;h1 id=&#34;js-&#34;&gt;JS 函数&lt;/h1&gt;</description>
+    </item>
     
     <item>
       <title>Js_object</title>
