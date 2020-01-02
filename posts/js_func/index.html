@@ -130,7 +130,8 @@ JS 函数
   }, <span style="color:#ae81ff">0</span>);
 }
 </code></pre></div><h3 id="-6--6-05-">以上代码的输出结果是 6 个 6，是不是跟你预期的 0-5 有出入</h3>
-<h3 id="settimeout-ii">这是因为当循环执行到<code>setTimeout()</code>的时候并不会马上打印出 i，而是会记下一个事件，”我等下要把<code>i</code>打一次“，然后会继续执行循环</h3>
+<h3 id="settimeoutfor">原因是<code>setTimeout()</code>函数回调属于异步任务，会出现在宏任务队列中，被压到了任务队列的最后，在这段代码应该是for循环这个同步任务执行完成后才会轮到它</h3>
+<h3 id="settimeout-ii">简单来说当循环执行到<code>setTimeout()</code>的时候并不会马上打印出 i，而是会记下一个事件，”我等下要把<code>i</code>打一次“，然后会继续执行循环，</h3>
 <h3 id="-for--i--6settimeout-6--6-ii6-6--6-666666">当 for 循环结束的时候，这时候 i 的值是 6，然后<code>setTimeout()</code>开始执行，因为刚才循环了 6 次，所以会将这个语句也执行 6 次，这时候会把<code>i</code>的值打印出来，但是这时候<code>i=6</code>，所以他就连续打了 6 个 6，是不是 666666。</h3>
 <h3 id="-js-1">但是这种性质其实对新人非常不友好，因为他是反直觉的，所以在最新版的 JS 语法中，做了一个微调</h3>
 <h1 id="exm5"><strong>exm5:</strong></h1>
@@ -140,6 +141,14 @@ JS 函数
   }, <span style="color:#ae81ff">0</span>);
 }
 </code></pre></div><h3 id="let-i0-for-05--6-">将<code>let i=0</code>放到 for 的条件里之后，情况发生了改变，这时候的输出结果就是一般人认为的，0-5 的输出 6 个数字</h3>
+<h2 id="heading2">其实这个问题还有另一种解决方法，那就是立即执行函数和闭包</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">6</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+  (<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fn</span>(<span style="color:#a6e22e">i</span>){<span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>);
+  }, <span style="color:#ae81ff">0</span>);})(<span style="color:#a6e22e">i</span>)
+}
+</code></pre></div><h3 id="heading3">在闭包函数内部形成局部作用域，不受外界变量变化的影响</h3>
+<p><img src="/images/js/js1/jsf/2.png" alt=""></p>
 <h1 id="this1">二、this</h1>
 <h3 id="-this--this-this--window">首先我们会问，这 this 到底是个什么，试着写一个函数，然后查看他的 this，我们可以看到 this 属性默认是指向 window，要了解他到底是什么我们可以从他的由来和作用入手</h3>
 <p><img src="/images/js/js1/jsf/1.png" alt=""></p>
