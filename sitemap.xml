@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ffreshman.github.io/categories/</loc>
+    <lastmod>2020-01-05T18:28:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ffreshman.github.io/tags/javascript/</loc>
+    <lastmod>2020-01-05T18:28:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ffreshman.github.io/categories/javascript/</loc>
+    <lastmod>2020-01-05T18:28:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ffreshman.github.io/posts/js_conclusion/</loc>
+    <lastmod>2020-01-05T18:28:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ffreshman.github.io/posts/</loc>
+    <lastmod>2020-01-05T18:28:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ffreshman.github.io/tags/</loc>
+    <lastmod>2020-01-05T18:28:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ffreshman.github.io/</loc>
+    <lastmod>2020-01-05T18:28:58+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ffreshman.github.io/about/</loc>
     <lastmod>2020-01-02T20:47:59+08:00</lastmod>
   </url>
@@ -13,37 +48,7 @@
   </url>
   
   <url>
-    <loc>https://ffreshman.github.io/</loc>
-    <lastmod>2020-01-02T20:47:59+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ffreshman.github.io/categories/</loc>
-    <lastmod>2020-01-02T20:04:21+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ffreshman.github.io/categories/javascript/</loc>
-    <lastmod>2020-01-02T20:04:21+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ffreshman.github.io/tags/javascript/</loc>
-    <lastmod>2020-01-02T20:04:21+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ffreshman.github.io/posts/js_func/</loc>
-    <lastmod>2020-01-02T20:04:21+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ffreshman.github.io/posts/</loc>
-    <lastmod>2020-01-02T20:04:21+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ffreshman.github.io/tags/</loc>
     <lastmod>2020-01-02T20:04:21+08:00</lastmod>
   </url>
   
@@ -113,12 +118,12 @@
   </url>
   
   <url>
-    <loc>https://ffreshman.github.io/posts/html.label/</loc>
+    <loc>https://ffreshman.github.io/tags/html/</loc>
     <lastmod>2019-12-09T21:40:04+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ffreshman.github.io/tags/html/</loc>
+    <loc>https://ffreshman.github.io/posts/html.label/</loc>
     <lastmod>2019-12-09T21:40:04+08:00</lastmod>
   </url>
   
