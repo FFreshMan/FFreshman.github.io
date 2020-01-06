@@ -62,7 +62,7 @@
       <pubDate>Fri, 20 Dec 2019 18:54:53 +0800</pubDate>
       
       <guid>https://ffreshman.github.io/posts/javascript/</guid>
-      <description>&lt;h1 id=&#34;font-colorff0000javascript-font&#34;&gt;&lt;!-- raw HTML omitted --&gt;JavaScript 的诞生&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;</description>
+      <description>&lt;h1 id=&#34;font-colorff0000javascript-font&#34;&gt;&lt;font color=#FF0000&gt;JavaScript 的诞生&lt;/font&gt;&lt;/h1&gt;</description>
     </item>
     
     <item>
@@ -116,7 +116,7 @@
       <pubDate>Thu, 05 Dec 2019 14:41:43 +0800</pubDate>
       
       <guid>https://ffreshman.github.io/posts/first-blog/</guid>
-      <description>&lt;h1 id=&#34;hugo&#34;&gt;如何用hugo搭建自己的个人博客&lt;/h1&gt;</description>
+      <description>&lt;h1 id=&#34;-hugo-&#34;&gt;如何用 hugo 搭建自己的个人博客&lt;/h1&gt;</description>
     </item>
     
   </channel>

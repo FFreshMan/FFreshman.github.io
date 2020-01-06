@@ -44,11 +44,17 @@ HTML
 
 
 
+<style>
+  .inverted a {
+     color: darkseagreen !important;
+  }
+</style>
+
 
   </head>
 
   
-  <body>
+  <body style="background-image: url(/img/cover.png);">
   
     <div class="flip-container">
       <div class="flipper">
@@ -186,7 +192,7 @@ tanindex=-1 不访问
 <h3 id="6-id">(6) id</h3>
 <p>hidden是一个布尔属性，表示当前的网页元素不再跟页面相关，因此浏览器不会渲染这个元素，所以就不会在网页中看到它。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">hidden</span>&gt;本句不会显示在页面上。&lt;/<span style="color:#f92672">p</span>&gt;
-</code></pre></div><p><!-- raw HTML omitted --> 注:意如果在css中设置了display：block则优先级高于hidden，内容依然会显示<!-- raw HTML omitted --></p>
+</code></pre></div><p><span style="color:red;"> 注:意如果在css中设置了display：block则优先级高于hidden，内容依然会显示</span></p>
 <h3 id="7lang">(7)Lang</h3>
 <p>lang属性指定网页元素使用的语言。</p>
 <ul>
@@ -226,9 +232,9 @@ tanindex=-1 不访问
 <p><code>&lt;span&gt;</code>是一个通用目的的行内标签（即不会产生换行），不带有任何语义。它通常用作 CSS 样式的钩子，如果需要对某些行内内容指定样式，就可以把它们放置在<code>&lt;span&gt;</code>。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;这是一句&lt;<span style="color:#f92672">span</span>&gt;重要&lt;/<span style="color:#f92672">span</span>&gt;的句子。&lt;/<span style="color:#f92672">p</span>&gt;
 </code></pre></div><h3 id="4br">(4)<code>&lt;br&gt;</code></h3>
-<p><code>&lt;br&gt;</code>让网页产生一个换行效果。该标签是单独使用的，<!-- raw HTML omitted --><!-- raw HTML omitted -->没有闭合标签。<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><code>&lt;br&gt;</code>让网页产生一个换行效果。该标签是单独使用的，<span style="color:red;"><strong>没有闭合标签。</strong></span></p>
 <h3 id="5hr">(5)<code>&lt;hr&gt;</code></h3>
-<p><code>&lt;hr&gt;</code>用来在一篇文章中分隔两个不同的主题，浏览器会将其渲染为一根水平线。该标签是单独使用的，<!-- raw HTML omitted -->没有闭合标签。<!-- raw HTML omitted --></p>
+<p><code>&lt;hr&gt;</code>用来在一篇文章中分隔两个不同的主题，浏览器会将其渲染为一根水平线。该标签是单独使用的，<span style="color:red;">没有闭合标签。</span></p>
 <h3 id="6precode">(6)<code>&lt;pre&gt;</code>和<code>&lt;code&gt;</code></h3>
 <p><code>&lt;pre&gt;</code>是一个块级元素，表示保留原来的格式（preformatted），即浏览器会保留该标签内部原始的换行和空格。浏览器默认以等宽字体显示标签内容。常和<code>&lt;code&gt;</code>一起使用</p>
 <p><code>&lt;code&gt;</code>标签是一个行内元素，表示标签内容是计算机代码，浏览器默认会以等宽字体显示。</p>
@@ -239,7 +245,7 @@ tanindex=-1 不访问
     }
     &lt;/<span style="color:#f92672">code</span>&gt;
 &lt;/<span style="color:#f92672">pre</span>&gt;
-</code></pre></div><p><!-- raw HTML omitted -->注:HTML 标签在<code>&lt;pre&gt;</code>里面还是起作用的。<code>&lt;pre&gt;</code>只保留空格和换行，不会保留 HTML 标签。<!-- raw HTML omitted --></p>
+</code></pre></div><p><span style="color:red;">注:HTML 标签在<code>&lt;pre&gt;</code>里面还是起作用的。<code>&lt;pre&gt;</code>只保留空格和换行，不会保留 HTML 标签。</span></p>
 <h3 id="7strongem">(7)<code>&lt;strong&gt;</code>和<code>&lt;em&gt;</code></h3>
 <p><code>&lt;em&gt;</code>是一个行内标签，表示强调（emphasize），浏览器会以斜体显示它包含的内容。
 注：<code>&lt;em&gt;</code>是语义上的强调，<code>&lt;strong&gt;</code>是内容上的强调。</p>
@@ -259,27 +265,6 @@ tanindex=-1 不访问
     
 
     
-      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore="true">
-        <div id="disqus_thread"></div>
-        <script>
-          
-
-
-          var disqus_config = function () {
-            this.page.url = 'https:\/\/ffreshman.github.io\/posts\/html\/';  
-            this.page.identifier = '\/posts\/html\/'; 
-          };
-
-          (function() { 
-            var d = document, s = d.createElement('script');
-            s.src = 'https://' + '...' + '.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      </footer>
-    
 
   </div>
   <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
@@ -287,9 +272,11 @@ tanindex=-1 不访问
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
       
+        <img src="/img/22.png">
+      
     </div>
 
-    <h3 class="ui header">&#39;s blog<div class="sub header" style="margin-top: 0.5rem;"></div>
+    <h3 class="ui header">FFreshman&#39;s blog<div class="sub header" style="margin-top: 0.5rem;">兴趣是最好的老师！</div>
     </h3>
 
     <div class="ui horizontal list">
@@ -435,7 +422,7 @@ tanindex=-1 不访问
 
   <section class="ui bottom attached center aligned segment">
       
-      <p>© 2020 小咸鱼的博客</p>
+      <p>© 2019 - 2020 小咸鱼的博客</p>
       
       <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
   </section>
@@ -483,7 +470,19 @@ tanindex=-1 不访问
       <div class="ui attached segment">
         <nav class="ui secondary menu dream-menu">
           
+            <div class="item">
+              <a href="mailto:1366157248@qq.com">
+                <i class="large mail icon" title="email"></i>
+              </a>
+            </div>
+          
 
+          
+            <div class="item">
+              <a href="https://github.com/FFreshman" target="_blank">
+                <i class="large github icon" title="github"></i>
+              </a>
+            </div>
           
 
           

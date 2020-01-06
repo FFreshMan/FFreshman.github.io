@@ -44,11 +44,17 @@ CSS总结
 
 
 
+<style>
+  .inverted a {
+     color: darkseagreen !important;
+  }
+</style>
+
 
   </head>
 
   
-  <body>
+  <body style="background-image: url(/img/cover.png);">
   
     <div class="flip-container">
       <div class="flipper">
@@ -186,7 +192,7 @@ Flex-direction:<span style="color:#a6e22e">row</span>(<span style="color:#66d9ef
     grid-template-row:[<span style="color:#66d9ef">first</span>]<span style="color:#ae81ff">40</span><span style="color:#66d9ef">px</span> [lin2]<span style="color:#ae81ff">50</span><span style="color:#66d9ef">px</span> [line3]<span style="color:#66d9ef">auto</span> [line4]<span style="color:#ae81ff">50</span><span style="color:#66d9ef">px</span> [<span style="color:#66d9ef">last</span>]<span style="color:#ae81ff">40</span><span style="color:#66d9ef">px</span>;
     grid-template-column:<span style="color:#ae81ff">25</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">auto</span>;
 }
-</code></pre></div><h3 id="abbr-titlefreespacefrabbr"><strong>还有一种划分区域划分单位是<!-- raw HTML omitted -->fr<!-- raw HTML omitted --></strong></h3>
+</code></pre></div><h3 id="abbr-titlefreespacefrabbr"><strong>还有一种划分区域划分单位是<abbr title=free-space>fr</abbr></strong></h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span>{
     grid-template-row:<span style="color:#ae81ff">1</span>fr <span style="color:#ae81ff">1</span>fr <span style="color:#ae81ff">1</span>fr
     <span style="color:#66d9ef">grid</span><span style="color:#f92672">-</span>template-column<span style="color:#f92672">:</span><span style="color:#ae81ff">25</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">auto</span>;
@@ -347,27 +353,6 @@ Flex-direction:<span style="color:#a6e22e">row</span>(<span style="color:#66d9ef
     
 
     
-      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore="true">
-        <div id="disqus_thread"></div>
-        <script>
-          
-
-
-          var disqus_config = function () {
-            this.page.url = 'https:\/\/ffreshman.github.io\/posts\/css\/';  
-            this.page.identifier = '\/posts\/css\/'; 
-          };
-
-          (function() { 
-            var d = document, s = d.createElement('script');
-            s.src = 'https://' + '...' + '.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      </footer>
-    
 
   </div>
   <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
@@ -375,9 +360,11 @@ Flex-direction:<span style="color:#a6e22e">row</span>(<span style="color:#66d9ef
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
       
+        <img src="/img/22.png">
+      
     </div>
 
-    <h3 class="ui header">&#39;s blog<div class="sub header" style="margin-top: 0.5rem;"></div>
+    <h3 class="ui header">FFreshman&#39;s blog<div class="sub header" style="margin-top: 0.5rem;">兴趣是最好的老师！</div>
     </h3>
 
     <div class="ui horizontal list">
@@ -523,7 +510,7 @@ Flex-direction:<span style="color:#a6e22e">row</span>(<span style="color:#66d9ef
 
   <section class="ui bottom attached center aligned segment">
       
-      <p>© 2020 小咸鱼的博客</p>
+      <p>© 2019 - 2020 小咸鱼的博客</p>
       
       <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
   </section>
@@ -571,7 +558,19 @@ Flex-direction:<span style="color:#a6e22e">row</span>(<span style="color:#66d9ef
       <div class="ui attached segment">
         <nav class="ui secondary menu dream-menu">
           
+            <div class="item">
+              <a href="mailto:1366157248@qq.com">
+                <i class="large mail icon" title="email"></i>
+              </a>
+            </div>
+          
 
+          
+            <div class="item">
+              <a href="https://github.com/FFreshman" target="_blank">
+                <i class="large github icon" title="github"></i>
+              </a>
+            </div>
           
 
           

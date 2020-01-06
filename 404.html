@@ -10,7 +10,7 @@
 
 
   
-  <meta name="author" content="" />
+  <meta name="author" content="FFreshman" />
   <meta name="description" content="" />
 
 
@@ -40,11 +40,17 @@
 
 
 
+<style>
+  .inverted a {
+     color: darkseagreen !important;
+  }
+</style>
+
 
   </head>
 
   
-  <body>
+  <body style="background-image: url(/img/cover.png);">
   
     <div class="flip-container">
       <div class="flipper">
@@ -69,7 +75,7 @@
     <img class="ui centered image dream-404-image" src="/img/404.png" alt="404">
     <p>
       
-        <button class="ui button" onclick="window.location.href = '/'">Back to Home</button>
+        <button class="ui inverted button" onclick="window.location.href = '/'">Back to Home</button>
       
     </p>
   </div>
@@ -114,7 +120,19 @@
       <div class="ui attached segment">
         <nav class="ui secondary menu dream-menu">
           
+            <div class="item">
+              <a href="mailto:1366157248@qq.com">
+                <i class="large mail icon" title="email"></i>
+              </a>
+            </div>
+          
 
+          
+            <div class="item">
+              <a href="https://github.com/FFreshman" target="_blank">
+                <i class="large github icon" title="github"></i>
+              </a>
+            </div>
           
 
           
@@ -132,29 +150,6 @@
   </section>
 
   
-  
-    <section class="sixteen wide mobile eight wide tablet eight wide computer column dream-column">
-      <footer class="ui segment">
-        <div id="disqus_thread"></div>
-        <script>
-          
-
-
-          var disqus_config = function () {
-            this.page.url = 'https:\/\/ffreshman.github.io\/404.htmlabout';  
-            this.page.identifier = '/about'; 
-          };
-
-          (function() { 
-            var d = document, s = d.createElement('script');
-            s.src = 'https://' + '...' + '.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      </footer>
-    </section>
   
 
 </div>

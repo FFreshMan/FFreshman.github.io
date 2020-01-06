@@ -44,11 +44,17 @@ Css Box
 
 
 
+<style>
+  .inverted a {
+     color: darkseagreen !important;
+  }
+</style>
+
 
   </head>
 
   
-  <body>
+  <body style="background-image: url(/img/cover.png);">
   
     <div class="flip-container">
       <div class="flipper">
@@ -89,11 +95,11 @@ Css Box
 <p><img src="/images/boxmodel.png" alt=""></p>
 <h1 id="-">二、 盒模型结构介绍</h1>
 <h2 id="heading1">盒模型分类</h2>
-<h3 id="1abbr-titlew3ccontentboxabbr"><strong>1.<!-- raw HTML omitted -->content-box<!-- raw HTML omitted --></strong></h3>
+<h3 id="1abbr-titlew3ccontentboxabbr"><strong>1.<abbr title="w3c盒模型">content-box</abbr></strong></h3>
 <blockquote>
 <p><strong>属性 width,height 只包含内容 content，不包含 border 和 padding。</strong></p>
 </blockquote>
-<h3 id="2-abbr-titleieborderboxabbr"><strong>2. <!-- raw HTML omitted -->border-box<!-- raw HTML omitted --></strong></h3>
+<h3 id="2-abbr-titleieborderboxabbr"><strong>2. <abbr title="IE盒模型">border-box</abbr></strong></h3>
 <blockquote>
 <p><strong>属性 width,height 包含 border 和 padding，指的是 content+padding+border。</strong></p>
 </blockquote>
@@ -146,27 +152,6 @@ Css Box
     
 
     
-      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore="true">
-        <div id="disqus_thread"></div>
-        <script>
-          
-
-
-          var disqus_config = function () {
-            this.page.url = 'https:\/\/ffreshman.github.io\/posts\/css-box\/';  
-            this.page.identifier = '\/posts\/css-box\/'; 
-          };
-
-          (function() { 
-            var d = document, s = d.createElement('script');
-            s.src = 'https://' + '...' + '.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      </footer>
-    
 
   </div>
   <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
@@ -174,9 +159,11 @@ Css Box
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
       
+        <img src="/img/22.png">
+      
     </div>
 
-    <h3 class="ui header">&#39;s blog<div class="sub header" style="margin-top: 0.5rem;"></div>
+    <h3 class="ui header">FFreshman&#39;s blog<div class="sub header" style="margin-top: 0.5rem;">兴趣是最好的老师！</div>
     </h3>
 
     <div class="ui horizontal list">
@@ -322,7 +309,7 @@ Css Box
 
   <section class="ui bottom attached center aligned segment">
       
-      <p>© 2020 小咸鱼的博客</p>
+      <p>© 2019 - 2020 小咸鱼的博客</p>
       
       <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
   </section>
@@ -370,7 +357,19 @@ Css Box
       <div class="ui attached segment">
         <nav class="ui secondary menu dream-menu">
           
+            <div class="item">
+              <a href="mailto:1366157248@qq.com">
+                <i class="large mail icon" title="email"></i>
+              </a>
+            </div>
+          
 
+          
+            <div class="item">
+              <a href="https://github.com/FFreshman" target="_blank">
+                <i class="large github icon" title="github"></i>
+              </a>
+            </div>
           
 
           
