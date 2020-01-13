@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jQuery on 小咸鱼的博客</title>
+    <link>https://ffreshman.github.io/tags/jquery/</link>
+    <description>Recent content in jQuery on 小咸鱼的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-hans</language>
+    <lastBuildDate>Mon, 13 Jan 2020 18:33:17 +0800</lastBuildDate>
+    
+	<atom:link href="https://ffreshman.github.io/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JQuery</title>
+      <link>https://ffreshman.github.io/posts/jquery/</link>
+      <pubDate>Mon, 13 Jan 2020 18:33:17 +0800</pubDate>
+      
+      <guid>https://ffreshman.github.io/posts/jquery/</guid>
+      <description>&lt;h1 id=&#34;jqueryhttpswwwjquery123comcategoryinternals-&#34;&gt;&lt;a href=&#34;https://www.jquery123.com/category/internals/&#34;&gt;jQuery&lt;/a&gt;的功能简单介绍&lt;/h1&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -4,36 +4,46 @@
   
   <url>
     <loc>https://ffreshman.github.io/categories/</loc>
-    <lastmod>2020-01-05T18:28:58+08:00</lastmod>
+    <lastmod>2020-01-13T18:33:17+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://ffreshman.github.io/tags/javascript/</loc>
-    <lastmod>2020-01-05T18:28:58+08:00</lastmod>
+    <lastmod>2020-01-13T18:33:17+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://ffreshman.github.io/categories/javascript/</loc>
-    <lastmod>2020-01-05T18:28:58+08:00</lastmod>
+    <lastmod>2020-01-13T18:33:17+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ffreshman.github.io/posts/js_conclusion/</loc>
-    <lastmod>2020-01-05T18:28:58+08:00</lastmod>
+    <loc>https://ffreshman.github.io/posts/jquery/</loc>
+    <lastmod>2020-01-13T18:33:17+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ffreshman.github.io/tags/jquery/</loc>
+    <lastmod>2020-01-13T18:33:17+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://ffreshman.github.io/posts/</loc>
-    <lastmod>2020-01-05T18:28:58+08:00</lastmod>
+    <lastmod>2020-01-13T18:33:17+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://ffreshman.github.io/tags/</loc>
-    <lastmod>2020-01-05T18:28:58+08:00</lastmod>
+    <lastmod>2020-01-13T18:33:17+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://ffreshman.github.io/</loc>
+    <lastmod>2020-01-13T18:33:17+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ffreshman.github.io/posts/js_conclusion/</loc>
     <lastmod>2020-01-05T18:28:58+08:00</lastmod>
   </url>
   
@@ -73,12 +83,12 @@
   </url>
   
   <url>
-    <loc>https://ffreshman.github.io/tags/http/</loc>
+    <loc>https://ffreshman.github.io/categories/http/</loc>
     <lastmod>2019-12-18T15:32:12+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ffreshman.github.io/categories/http/</loc>
+    <loc>https://ffreshman.github.io/tags/http/</loc>
     <lastmod>2019-12-18T15:32:12+08:00</lastmod>
   </url>
   
@@ -93,12 +103,12 @@
   </url>
   
   <url>
-    <loc>https://ffreshman.github.io/categories/css/</loc>
+    <loc>https://ffreshman.github.io/tags/css/</loc>
     <lastmod>2019-12-17T13:43:05+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ffreshman.github.io/tags/css/</loc>
+    <loc>https://ffreshman.github.io/categories/css/</loc>
     <lastmod>2019-12-17T13:43:05+08:00</lastmod>
   </url>
   
@@ -113,12 +123,12 @@
   </url>
   
   <url>
-    <loc>https://ffreshman.github.io/categories/html/</loc>
+    <loc>https://ffreshman.github.io/tags/html/</loc>
     <lastmod>2019-12-09T21:40:04+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ffreshman.github.io/tags/html/</loc>
+    <loc>https://ffreshman.github.io/categories/html/</loc>
     <lastmod>2019-12-09T21:40:04+08:00</lastmod>
   </url>
   
